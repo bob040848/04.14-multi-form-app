@@ -7,10 +7,10 @@ export const Header = ({ step }) => {
         <>
           <div className="flex justify-start mb-4">
             <Image
-              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
-              alt="Google Logo"
+              src="https://pinecone-academy-multi-step-form.vercel.app/pinecone-logo.svg"
+              alt="pinecone-logo"
               width={92}
-              height={30}
+              height={80}
             />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Join Us! 😎</h1>

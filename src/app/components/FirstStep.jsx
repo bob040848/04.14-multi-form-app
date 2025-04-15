@@ -4,8 +4,8 @@ import { Input } from "./Input";
 export const FirstStep = ({ formData, updateFormData }) => {
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     updateFormData({ [name]: value });
     setErrors({ ...errors, [name]: "" });
   };
@@ -20,8 +20,8 @@ export const FirstStep = ({ formData, updateFormData }) => {
     return "";
   };
 
-  const handleBlur = (e) => {
-    const { name, value } = e.target;
+  const handleBlur = (event) => {
+    const { name, value } = event.target;
     const error = validateField(name, value);
     setErrors({ ...errors, [name]: error });
   };

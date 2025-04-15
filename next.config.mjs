@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["www.google.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pinecone-academy-multi-step-form.vercel.app",
+        port: "",
+        pathname: "**",
+      },
+    ],
   },
 };
 

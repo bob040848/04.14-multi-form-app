@@ -120,7 +120,7 @@ const Home = () => {
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
           className={`bg-white rounded-lg shadow-xl p-6 w-full ${
             step === 4 ? "max-w-xs min-h-[150px]" : "max-w-md min-h-[400px]"
           }`}

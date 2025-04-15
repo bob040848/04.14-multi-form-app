@@ -5,8 +5,8 @@ export const ThirdStep = ({ formData, updateFormData }) => {
   const [errors, setErrors] = useState({});
   const [imagePreview, setImagePreview] = useState(null);
 
-  const handleDateChange = (e) => {
-    const { name, value } = e.target;
+  const handleDateChange = (event) => {
+    const { name, value } = event.target;
     updateFormData({ [name]: value });
     setErrors({ ...errors, [name]: validateField(name, value) });
   };
@@ -27,8 +27,8 @@ export const ThirdStep = ({ formData, updateFormData }) => {
     return "";
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
     if (file) {
       updateFormData({ image: file });
       setImagePreview(URL.createObjectURL(file));
@@ -38,13 +38,13 @@ export const ThirdStep = ({ formData, updateFormData }) => {
     }
   };
 
-  const handleDragOver = (e) => {
-    e.preventDefault();
+  const handleDragOver = (event) => {
+    event.preventDefault();
   };
 
-  const handleDrop = (e) => {
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
+  const handleDrop = (event) => {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
     if (file) {
       updateFormData({ image: file });
       setImagePreview(URL.createObjectURL(file));
@@ -54,8 +54,8 @@ export const ThirdStep = ({ formData, updateFormData }) => {
     }
   };
 
-  const handleDateBlur = (e) => {
-    const { name, value } = e.target;
+  const handleDateBlur = (event) => {
+    const { name, value } = event.target;
     setErrors({ ...errors, [name]: validateField(name, value) });
   };
 
